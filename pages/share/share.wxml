@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <!-- 背景图容器，最底层，模糊效果 -->
+    <view class="back" style="background-image: url('{{file_path}}');"></view>
+    <!-- 主题内容部分 -->
+    <view class="content" wx:if="{{author}}">
+      <!-- 主编辑区 -->
+      <view class="editor">
+        <view class="editor-content" style="border-color: {{colors[color_ind].border}};background-color: {{colors[color_ind].opacity}};">
+          <!-- 头像 -->
+          <view style="background-image: url('{{userInfo.avatarUrl}}');border: 2px solid {{colors[color_ind].border}}" class="avatar"></view>
+          <!-- 祝福 -->
+          <view class="wish">
+            <view class="title" style="color:{{colors[color_ind].dark}}">{{nicknames[chosen_ind]}} {{userInfo.nickName}}：</view>
+            <view class="wish-content">{{text_content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button bindtap="author" wx:if="{{!author}}">点此授权查看</button>
+  </view>
+
+</view>

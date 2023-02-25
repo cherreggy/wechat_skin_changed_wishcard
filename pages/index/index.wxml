@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+<view>
+ <!-- 背景图容器，最底层，模糊效果 -->
+ <view class="back" style="background-image: url('{{file_path}}');"></view>
+  <!-- 主题内容部分 -->
+  <view class="content">
+    <!-- 主编辑区 -->
+    <view class="editor">
+      <view class="editor-content" style="border-color: {{colors[color_ind].border}};background-color: {{colors[color_ind].opacity}};">
+        <!-- 昵称选择 -->
+        我叫对方：
+        <picker bindchange="bindPickerChange" value="{{ chosen_ind}}" range="{{nicknames}}" class="pick_names" bindchange="pick" style="background-color: {{colors[color_ind].background}};">
+          <view>
+          {{nicknames[chosen_ind]}}
+          </view>
+        </picker>
+        <!-- 祝福编辑区域 -->
+        <textarea name="" id="" cols="30" rows="10" value="{{text_content}}" class="text" maxlength="-1" bindinput="changeWrites" style="border-color: {{colors[color_ind].border}};background-color: {{colors[color_ind].opacity}};"></textarea>
+      </view>
+    </view>
+    <!-- 下部布局 -->
+    <view class="bottom">
+      <!-- 皮肤选择 -->
+      <view class="skin-choser"  style="border-color: {{colors[color_ind].border}};background-color: {{colors[color_ind].opacity}};">
+          <button class="box" size="mini" bindtap="chooseColor" id="0"></button>
+          <button class="box red" size="mini" bindtap="chooseColor" id="1"></button>
+          <button class="box blue" size="mini" bindtap="chooseColor" id="2"></button>
+          <button class="box yellow" size="mini" bindtap="chooseColor" id="3"></button>
+          <button class="box black" size="mini" bindtap="chooseColor" id="4"></button>
+      </view>
+      <!-- 背景图选择按钮 -->
+      <button class="image-choser" bindtap="changeBack" style="background-color: {{colors[color_ind].background}};">
+        <view class="iconfont icon-shangchuantupian" style="color: {{colors[color_ind].dark}};"></view>
+      </button>
+    </view>
+  </view>
+  <button class="share" style="background-color: {{colors[color_ind].background}};color: {{colors[color_ind].dark}};" open-type="share">分享</button>
+</view>
+ 
+</view>
