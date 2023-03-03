@@ -1,5 +1,4 @@
-# <font color=deeppink>🎉 换皮贺卡</font>微信小程序<br><font size=3 color=grey>携程前端训练营</font><font size=3 color=grey>&nbsp;&nbsp;&nbsp;&nbsp;姓名：宣正吉 </font>
-
+# <font color=deeppink>🎉 换皮贺卡</font>微信小程序<br>
 本项目已发布在 GitHub，链接：https://github.com/cherreggy/wechat_skin_changed_wishcard
 
 小程序也已经发布：宣宣的换皮贺卡
